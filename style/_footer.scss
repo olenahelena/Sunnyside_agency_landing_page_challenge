@@ -1,0 +1,45 @@
+.footer {
+    background-color: $moderate-cyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 0;
+}
+
+.footer__logo {
+    margin-bottom: 2.8125rem;
+}
+
+.footer__navigation {
+    margin-bottom: 1.25rem;
+}
+
+.footer__menu {
+    display: flex;
+    align-items: center;
+    gap: 3.625rem;
+    margin-bottom: 5.75rem;
+}
+
+.footer__list {}
+
+.footer__list-item {
+    color: $Dark-moderate-cyan;
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 1.75rem;
+    margin-bottom: 5rem;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: $Dark-moderate-cyan;
+    // margin-bottom: 5rem;
+
+    a {
+        color: $white;
+    }
+}

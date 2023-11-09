@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/* ------------------------ */
+
+@import "reset";
+@import "variables";
+@import "header";
+@import "footer";
+@import "testimonials";
+
+/* ------------------------ */
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: $white;
+    color: $dark-grayish-blue;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    // max-width: 80rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    margin: 0 auto;
+}
+
+/* ------------------------ */
+
+.main {
+    background: url(../images/mobile/image-header.jpg) center/cover no-repeat;
+    height: 28.875rem;
+    padding-top: 4.625rem;
+}
+
+.main-page__title {
+    font-family: 'Fraunces', serif;
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.4462rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.6875rem;
+}
+
+.main__arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------ */
+
+.services__container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.services__img {
+    background: url(../images/mobile/image-transform.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 19.5rem;
+}
+
+.services__img-glass {
+    background: url(../images/mobile/image-stand-out.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 19.5rem;
+}
+
+.services__content {
+    padding: 4.5625rem 1.875rem 0;
+}
+
+.services__content,
+.services__content-bg1,
+.services__content-bg2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__content-bg1 {
+    background: url(../images/mobile/image-graphic-design.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 37.3125rem;
+}
+
+.services__content-bg2 {
+    background: url(../images/mobile/image-photography.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 37.3125rem;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0.08rem;
+    color: $Very-dark-desaturated-blue;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.035rem;
+    padding-top: 25.1875rem;
+    margin-bottom: 2rem;
+}
+
+.services__content-text {
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 2.625rem;
+}
+
+.services__btn_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.services__btn {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1rem;
+    color: $Very-dark-desaturated-blue;
+    text-transform: uppercase;
+    margin-bottom: 3.9375rem;
+}
+
+.services__btn__yellow,
+.services__btn__orange {
+    display: block;
+    width: 8.5rem;
+    height: 0.625rem;
+    border-radius: 0.25rem;
+    opacity: 0.2;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+.services__btn__yellow {
+    background-color: $yellow;
+    top: 0.8125rem;
+}
+
+.services__btn__orange {
+    background-color: $soft-red;
+    top: 0.75rem;
+}
+
+.services__btn__yellow:hover,
+.services__btn__orange:hover {
+    opacity: 0.6;
+}
+
+.cyan {
+    color: $Dark-desaturated-cyan;
+}
+
+.blue {
+    color: $Dark-blue;
+}
+
+.services__content-text.blue,
+.services__content-text.cyan {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* ------------------------ */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.gallery__item {
+    width: 100%;
+    /* Ensure images take 100% width of their parent container */
+    height: auto;
+}
+
+/* ------------------------ */

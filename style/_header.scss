@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+    background: url(../images/mobile/image-header.jpg) 0 0 no-repeat;
+    height: 5rem;
+    padding-top: 1.9375rem;
+    padding-bottom: 1.5rem;
+}
+
+.menu__burger {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.125rem;
+}
+
+.burger__line {
+    display: block;
+    width: 1.5rem;
+    height: 0.125rem;
+    background-color: $white;
+    margin-bottom: 0.375rem;
+}
+
+.header__logo {}
+
+.header__menu {
+    background: $white;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // gap: 2.625rem;
+    padding-top: 2.875rem;
+    padding-bottom: 2.4375rem;
+    height: 305px;
+}
+
+.menu__burger-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.125rem;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 2.625rem;
+}
+
+
+.menu__item:nth-child(3) {
+    margin-bottom: 54px;
+}
+
+.menu__item:not(:last-child) {
+    margin-bottom: 2.625rem;
+}
+
+.menu__button {
+    padding: 1.375rem 2rem 1.3125rem;
+    background-color: $yellow;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: $Very-dark-desaturated-blue;
+}
+
+.menu__link {}
