@@ -7,7 +7,9 @@
 }
 
 .footer__logo {
-    margin-bottom: 2.8125rem;
+    padding-bottom: 2.8125rem;
+    width: 169px;
+    margin: 0 auto;
 }
 
 .footer__navigation {
@@ -17,7 +19,8 @@
 .footer__menu {
     display: flex;
     align-items: center;
-    gap: 3.625rem;
+    justify-content: center;
+    gap: 3.5rem;
     margin-bottom: 5.75rem;
 }
 
@@ -30,6 +33,7 @@
 .footer__social-icons {
     display: flex;
     gap: 1.75rem;
+    justify-content: center;
     margin-bottom: 5rem;
 }
 
