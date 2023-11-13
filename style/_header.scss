@@ -1,9 +1,5 @@
 .header {
     position: relative;
-    background: url(../images/mobile/image-header.jpg) 0 0 no-repeat;
-    height: 5rem;
-    padding-top: 1.9375rem;
-    padding-bottom: 1.5rem;
 }
 
 // .menu__burger {
@@ -21,6 +17,9 @@
 // }
 
 .header__logo {
+    position: absolute;
+    left: 2.25rem;
+    top: 2rem;
     width: 7.75rem;
     height: 1.5625rem;
 }
@@ -62,3 +61,10 @@
 // }
 
 // .menu__link {}
+
+// @media (min-width: 991.98px) {
+//     .header {
+//         background: hsla(200, 100%, 62%, 1);
+//         box-shadow: 0px 4px 6px 0px rgba(132, 132, 132, 0.40);
+//     }
+// }

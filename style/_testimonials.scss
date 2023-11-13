@@ -53,3 +53,11 @@ h4 {
     color: $grayish-blue;
     font-family: 'Barlow', sans-serif;
 }
+
+@media (min-width: 991.98px) {
+    .testimonials__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}

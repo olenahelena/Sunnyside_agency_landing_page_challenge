@@ -28,6 +28,11 @@
 
 .footer__list-item {
     color: $Dark-moderate-cyan;
+    transition: color 0.3s ease-in;
+}
+
+.footer__list-item:hover {
+    color: hsl(167, 40%, 24%);
 }
 
 .footer__social-icons {
@@ -37,13 +42,35 @@
     margin-bottom: 5rem;
 }
 
+.footer__social-icon {
+    background-color: transparent;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in;
+}
+
+.footer__social-icon:hover {
+    background-color: hsl(168, 34%, 61%);
+
+}
+
 .attribution {
     font-size: 0.6875rem;
     text-align: center;
     color: $Dark-moderate-cyan;
-    // margin-bottom: 5rem;
 
     a {
         color: $white;
+    }
+}
+
+@media (min-width: 767.98px) {
+
+    .footer__menu {
+        gap: 4.75rem;
+    }
+
+    .footer__social-icons {
+        gap: 3rem;
     }
 }

@@ -39,9 +39,11 @@ body {
 /* ------------------------ */
 
 .main {
-    background: url(../images/mobile/image-header.jpg) center/cover no-repeat;
-    height: 28.875rem;
-    padding-top: 4.625rem;
+    background: url(../images/mobile/image-header.jpg) no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    height: 541px;
+    padding-top: 154px;
 }
 
 .main-page__title {
@@ -53,7 +55,7 @@ body {
     letter-spacing: 0.4462rem;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 3.6875rem;
+    margin-bottom: 3rem;
 }
 
 .main__arrow {
@@ -91,6 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .services__content-bg1 {
@@ -133,6 +136,7 @@ h3 {
     text-align: center;
     line-height: 1.7;
     margin-bottom: 2.625rem;
+    width: 330px;
 }
 
 .services__btn_content {
@@ -190,6 +194,7 @@ h3 {
 .services__content-text.cyan {
     font-size: 1rem;
     margin-bottom: 0;
+    padding: 0 0.9375rem 0;
 }
 
 /* ------------------------ */
@@ -201,8 +206,73 @@ h3 {
 
 .gallery__item {
     width: 100%;
-    /* Ensure images take 100% width of their parent container */
     height: auto;
 }
 
 /* ------------------------ */
+
+@media (min-width: 479.98px) {
+
+    .main {
+        height: 37.5rem;
+        padding-top: 6.25rem;
+    }
+
+    .services__img,
+    .services__img-glass {
+        min-height: 462px;
+    }
+
+    .services__content-bg1,
+    .services__content-bg2 {
+        height: 49.8125rem;
+    }
+}
+
+@media (min-width: 700px) {
+    [class*="__container"] {
+        max-width: 515px;
+    }
+
+    .services__content-text {
+        width: 515px;
+    }
+}
+
+@media (min-width: 767.98px) {
+    .main {
+        background: url(../images/desktop/image-header.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 1080px;
+    }
+
+    .main {
+        padding-top: 207px;
+        height: 785px;
+    }
+
+    .main-page__title {
+        font-size: 3.375rem;
+        line-height: 1;
+        letter-spacing: 0.675rem;
+        margin-bottom: 6.4375rem;
+    }
+
+    /* ------------------------ */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    /* ------------------------ */
+}
+
+
+@media (max-width: 1280px) {}
