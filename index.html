@@ -20,29 +20,44 @@
           <img src="/images/logo.svg" alt="Logo">
         </div>
         <div class="menu__burger-icon">
-          <img src="/images/icon-hamburger.svg" alt="icon menu">
+          <img src="/images/icon-hamburger.svg" alt="icon menu" id="burger__btn">
         </div>
-        <!-- <div class="menu__burger">
-          <span class="burger__line line1"></span>
-          <span class="burger__line line2"></span>
-          <span class="burger__line line3"></span>
-        </div> -->
-        <!-- <nav class="header__menu">
+        <nav class="header__menu error" id="menu__mobile">
+          <span class="menu__part"></span>
           <ul class="menu__list">
             <li class="menu__item">
-              <a data-goto=".main" href="#" class="menu__link">About</a>
+              <a data-goto=".services" href="#" class="menu__link">About</a>
             </li>
             <li class="menu__item">
-              <a data-goto=".main" href="#" class="menu__link">Services</a>
+              <a data-goto=".projects" href="#" class="menu__link">Services</a>
             </li>
             <li class="menu__item">
-              <a data-goto=".main" href="#" class="menu__link">Projects</a>
+              <a data-goto=".testimonials" href="#" class="menu__link">Projects</a>
             </li>
             <li class="menu__item">
-              <a data-goto=".main" href="#" class="menu__link menu__button">Contact</a>
+              <a data-goto=".gallery" href="#" class="menu__link menu__button">Contact</a>
             </li>
           </ul>
-        </nav> -->
+        </nav>
+
+        <nav class="header__menu-desktop">
+          <ul class="menu__list-desktop">
+            <li class="menu__item-desktop">
+              <a data-goto=".services" href="#" class="menu__link-desktop">About</a>
+            </li>
+            <li class="menu__item-desktop">
+              <a data-goto=".projects" href="#" class="menu__link-desktop">Services</a>
+            </li>
+            <li class="menu__item-desktop">
+              <a data-goto=".testimonials" href="#" class="menu__link-desktop">Projects</a>
+            </li>
+            <li class="menu__item-desktop">
+              <a data-goto=".gallery" href="#" class="menu__link-desktop menu__button">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+
       </div>
     </header>
 
@@ -109,8 +124,6 @@
         <h4>Client testimonials</h4>
         <div class="testimonials__container">
 
-
-
           <div class="testimonials__content">
             <img src="/images/image-emily.jpg" alt="User image" class="testimonials__profile_img">
             <p class="testimonials__text">We put our trust in Sunnyside and they delivered, making sure our needs were
@@ -138,10 +151,24 @@
       </section>
 
       <section class="gallery">
-        <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles" class="gallery__item">
-        <img src="/images/mobile/image-gallery-orange.jpg" alt="Orange" class="gallery__item">
-        <img src="/images/mobile/image-gallery-cone.jpg" alt="Cone" class="gallery__item">
-        <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes" class="gallery__item">
+        <picture>
+          <!-- Use a larger image for screens wider than 600px -->
+          <source media="(min-width: 700px)" srcset="/images/desktop/image-gallery-milkbottles.jpg">
+          <!-- Fallback image for smaller screens -->
+          <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles" class="gallery__item">
+        </picture>
+        <picture>
+          <source media="(min-width: 700px)" srcset="/images/desktop/image-gallery-orange.jpg">
+          <img src="/images/mobile/image-gallery-orange.jpg" alt="Orange" class="gallery__item">
+        </picture>
+        <picture>
+          <source media="(min-width: 700px)" srcset="/images/desktop/image-gallery-cone.jpg">
+          <img src="/images/mobile/image-gallery-cone.jpg" alt="Cone" class="gallery__item">
+        </picture>
+        <picture>
+          <source media="(min-width: 700px)" srcset="/images/desktop/image-gallery-sugarcubes.jpg">
+          <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes" class="gallery__item">
+        </picture>
       </section>
     </main>
 
@@ -177,7 +204,6 @@
       </div>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 

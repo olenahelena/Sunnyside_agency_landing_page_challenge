@@ -69,11 +69,13 @@ span {
 /* Neutral colors */
 .header {
   position: relative;
+  background-image: url(/images/desktop/image-header.jpg);
+  height: 5.625rem;
 }
 
 .header__logo {
   position: absolute;
-  left: 2.25rem;
+  left: 1.4rem;
   top: 2rem;
   width: 7.75rem;
   height: 1.5625rem;
@@ -81,10 +83,93 @@ span {
 
 .menu__burger-icon {
   position: absolute;
-  right: 2.25rem;
+  right: 1.5rem;
   top: 2rem;
 }
 
+.header__menu-desktop {
+  display: none;
+}
+
+/* ------------------------ */
+.header__menu {
+  background: hsl(0, 0%, 100%);
+  padding-top: 2.875rem;
+  padding-bottom: 2.4375rem;
+  height: 19.3125rem;
+  width: 20.625rem;
+  right: 1.5625rem;
+  top: 6.5625rem;
+  position: absolute;
+}
+
+.menu__part {
+  position: absolute;
+  height: 0;
+  border-left: 2.0625rem solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 2.125rem solid hsl(0, 0%, 100%);
+  display: inline-block;
+  top: -1.25rem;
+  right: 0;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__link,
+.menu__link-desktop {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu__link:hover,
+.menu__link-desktop:hover {
+  color: hsl(51, 100%, 49%);
+}
+
+.menu__item:nth-child(3) {
+  margin-bottom: 3.375rem;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 2.625rem;
+}
+
+.menu__button {
+  padding: 1.375rem 2rem 1.3125rem;
+  background-color: hsl(51, 100%, 49%);
+  border-radius: 1.875rem;
+  text-transform: uppercase;
+  color: hsl(212, 27%, 19%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu__button:hover {
+  color: hsl(198, 62%, 26%);
+  background: rgba(255, 231, 17, 0.25);
+}
+
+/* ------------------------ */
+.error {
+  display: none;
+}
+
+/* ------------------------ */
+@media (min-width: 479.98px) {
+  .header__menu {
+    width: 80%;
+  }
+}
+@media (min-width: 767.98px) {
+  .header__menu {
+    width: 65%;
+  }
+}
 @media (min-width: 991.98px) {
   .menu__burger-icon {
     display: none;
@@ -100,6 +185,37 @@ span {
     width: 7.75rem;
     height: 1.5625rem;
   }
+  .menu__part {
+    display: none;
+  }
+  .header__menu-desktop {
+    display: inline-block;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 3.5625rem;
+    width: 29.4375rem;
+    right: 2.5rem;
+    top: 2.8125rem;
+    position: absolute;
+  }
+  .menu__list-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .menu__link-desktop {
+    color: hsl(0, 0%, 100%);
+  }
+  .menu__button {
+    color: hsl(212, 27%, 19%);
+    background-color: hsl(0, 0%, 100%);
+  }
+  .menu__button:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 }
 .footer {
   background-color: hsl(167, 44%, 70%);
@@ -111,7 +227,7 @@ span {
 
 .footer__logo {
   padding-bottom: 2.8125rem;
-  width: 169px;
+  width: 10.5625rem;
   margin: 0 auto;
 }
 
@@ -130,10 +246,11 @@ span {
 .footer__list-item {
   color: hsl(168, 34%, 41%);
   transition: color 0.3s ease-in;
+  cursor: pointer;
 }
 
 .footer__list-item:hover {
-  color: hsl(167, 40%, 24%);
+  color: hsl(0, 0%, 100%);
 }
 
 .footer__social-icons {
@@ -141,6 +258,7 @@ span {
   gap: 1.75rem;
   justify-content: center;
   margin-bottom: 5rem;
+  cursor: pointer;
 }
 
 .footer__social-icon {
@@ -151,7 +269,7 @@ span {
 }
 
 .footer__social-icon:hover {
-  background-color: hsl(168, 34%, 61%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .attribution {
@@ -163,14 +281,6 @@ span {
   color: hsl(0, 0%, 100%);
 }
 
-@media (min-width: 767.98px) {
-  .footer__menu {
-    gap: 4.75rem;
-  }
-  .footer__social-icons {
-    gap: 3rem;
-  }
-}
 .testimonials {
   padding-top: 3.9375rem;
   padding-bottom: 5.8125rem;
@@ -228,14 +338,34 @@ h4 {
 }
 
 @media (min-width: 991.98px) {
+  .testimonials {
+    padding: 10.25rem 0.9375rem 10.25rem 0.9375rem;
+  }
   .testimonials__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
-  .testimonials {
-    padding-top: 10.25rem;
-    padding-bottom: 10.25rem;
+  .testimonials__text {
+    width: 18.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .testimonials__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  h4 {
+    margin-bottom: 5.25rem;
+  }
+  .testimonials__profile_img {
+    margin-bottom: 4.1875rem;
+  }
+  .testimonials__text {
+    margin-bottom: 4.875rem;
+    width: 21.375rem;
+  }
+  .testimonials__content:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 /* ------------------------ */
@@ -270,8 +400,8 @@ body {
   background: url(../images/mobile/image-header.jpg) no-repeat;
   background-position: bottom center;
   background-size: cover;
-  height: 541px;
-  padding-top: 154px;
+  height: 33.8125rem;
+  padding-top: 9.625rem;
 }
 
 .main-page__title {
@@ -365,6 +495,7 @@ h2 {
   opacity: 0.2;
   position: absolute;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .services__btn__yellow {
@@ -441,7 +572,7 @@ h2 {
   }
   .services__img,
   .services__img-glass {
-    min-height: 462px;
+    min-height: 28.875rem;
   }
   .services__content-bg1,
   .services__content-bg2 {
@@ -450,10 +581,10 @@ h2 {
 }
 @media (min-width: 700px) {
   [class*=__container] {
-    max-width: 515px;
+    max-width: 32.1875rem;
   }
   .services__content-text {
-    width: 515px;
+    width: 32.1875rem;
   }
 }
 @media (min-width: 767.98px) {
@@ -465,11 +596,11 @@ h2 {
 }
 @media (min-width: 991.98px) {
   [class*=__container] {
-    max-width: 1080px;
+    max-width: 60rem;
   }
   .main {
-    padding-top: 207px;
-    height: 785px;
+    padding-top: 12.9375rem;
+    height: 49.0625rem;
   }
   .main-page__title {
     font-size: 3.375rem;
@@ -509,7 +640,7 @@ h2 {
   .services__content {
     width: 50%;
     align-items: self-start;
-    padding: 169px 161px 157px;
+    padding: 4.3125rem 1.9375rem 3.5625rem;
     height: 37.5rem;
   }
   .services__img,
@@ -544,6 +675,11 @@ h2 {
     text-align: center;
     width: 21.375rem;
   }
+  .projects__content-text.blue,
+  .projects__content-text.cyan {
+    padding: 0;
+    margin-bottom: 3.875rem;
+  }
   .projects__content-bg1 {
     background: url(../images/desktop/image-graphic-design.jpg) center/cover no-repeat;
     height: 37.5rem;
@@ -551,5 +687,13 @@ h2 {
   .projects__content-bg2 {
     background: url(../images/desktop/image-photography.jpg) center/cover no-repeat;
     height: 37.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  [class*=__container] {
+    max-width: 67.5rem;
+  }
+  .services__content {
+    padding: 10.5625rem 10.0625rem 9.8125rem;
   }
 }/*# sourceMappingURL=style.css.map */

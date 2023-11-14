@@ -55,14 +55,41 @@ h4 {
 }
 
 @media (min-width: 991.98px) {
-    .testimonials__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+    .testimonials {
+        padding: 10.25rem 0.9375rem 10.25rem 0.9375rem;
     }
 
-    .testimonials {
-        padding-top: 10.25rem;
-        padding-bottom: 10.25rem;
+    .testimonials__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .testimonials__text {
+        width: 18.75rem;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .testimonials__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h4 {
+        margin-bottom: 5.25rem;
+    }
+
+    .testimonials__profile_img {
+        margin-bottom: 4.1875rem;
+    }
+
+    .testimonials__text {
+        margin-bottom: 4.875rem;
+        width: 21.375rem;
+    }
+
+    .testimonials__content:not(:last-child) {
+        margin-bottom: 0;
     }
 }

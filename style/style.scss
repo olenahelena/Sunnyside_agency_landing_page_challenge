@@ -42,8 +42,8 @@ body {
     background: url(../images/mobile/image-header.jpg) no-repeat;
     background-position: bottom center;
     background-size: cover;
-    height: 541px;
-    padding-top: 154px;
+    height: 33.8125rem;
+    padding-top: 9.625rem;
 }
 
 .main-page__title {
@@ -138,6 +138,7 @@ h2 {
     opacity: 0.2;
     position: absolute;
     transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
 .services__btn__yellow {
@@ -219,7 +220,7 @@ h2 {
 
     .services__img,
     .services__img-glass {
-        min-height: 462px;
+        min-height: 28.875rem;
     }
 
     .services__content-bg1,
@@ -230,11 +231,11 @@ h2 {
 
 @media (min-width: 700px) {
     [class*="__container"] {
-        max-width: 515px;
+        max-width: 32.1875rem;
     }
 
     .services__content-text {
-        width: 515px;
+        width: 32.1875rem;
     }
 }
 
@@ -248,12 +249,12 @@ h2 {
 
 @media (min-width: 991.98px) {
     [class*="__container"] {
-        max-width: 1080px;
+        max-width: 60rem;
     }
 
     .main {
-        padding-top: 207px;
-        height: 785px;
+        padding-top: 12.9375rem;
+        height: 49.0625rem;
     }
 
     .main-page__title {
@@ -303,7 +304,7 @@ h2 {
     .services__content {
         width: 50%;
         align-items: self-start;
-        padding: 169px 161px 157px;
+        padding: 4.3125rem 1.9375rem 3.5625rem;
         height: 37.5rem;
     }
 
@@ -347,6 +348,12 @@ h2 {
         width: 21.375rem;
     }
 
+    .projects__content-text.blue,
+    .projects__content-text.cyan {
+        padding: 0;
+        margin-bottom: 3.875rem;
+    }
+
     .projects__content-bg1 {
         background: url(../images/desktop/image-graphic-design.jpg) center/cover no-repeat;
         height: 37.5rem;
@@ -359,4 +366,12 @@ h2 {
 }
 
 
-@media (max-width: 1280px) {}
+@media (min-width: 1280px) {
+    [class*="__container"] {
+        max-width: 67.5rem;
+    }
+
+    .services__content {
+        padding: 10.5625rem 10.0625rem 9.8125rem;
+    }
+}

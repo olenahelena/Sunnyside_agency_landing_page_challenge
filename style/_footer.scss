@@ -8,7 +8,7 @@
 
 .footer__logo {
     padding-bottom: 2.8125rem;
-    width: 169px;
+    width: 10.5625rem;
     margin: 0 auto;
 }
 
@@ -24,15 +24,14 @@
     margin-bottom: 5.75rem;
 }
 
-.footer__list {}
-
 .footer__list-item {
     color: $Dark-moderate-cyan;
     transition: color 0.3s ease-in;
+    cursor: pointer;
 }
 
 .footer__list-item:hover {
-    color: hsl(167, 40%, 24%);
+    color: $white;
 }
 
 .footer__social-icons {
@@ -40,6 +39,7 @@
     gap: 1.75rem;
     justify-content: center;
     margin-bottom: 5rem;
+    cursor: pointer;
 }
 
 .footer__social-icon {
@@ -50,8 +50,7 @@
 }
 
 .footer__social-icon:hover {
-    background-color: hsl(168, 34%, 61%);
-
+    background-color: $white;
 }
 
 .attribution {
@@ -61,16 +60,5 @@
 
     a {
         color: $white;
-    }
-}
-
-@media (min-width: 767.98px) {
-
-    .footer__menu {
-        gap: 4.75rem;
-    }
-
-    .footer__social-icons {
-        gap: 3rem;
     }
 }
